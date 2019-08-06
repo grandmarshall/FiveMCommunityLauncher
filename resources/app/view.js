@@ -27,8 +27,7 @@ $(document).ready(function () {
     $("#update-alert").hide()
      
     $("a").click( function (event) {  
-        var ele = $(this)
-        alert(ele.attr("id"))
+        var ele = $(this);
         event.preventDefault();
         PerformJSDuty(ele);
     });
