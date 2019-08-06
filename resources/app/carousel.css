@@ -7,7 +7,6 @@
 ::-webkit-scrollbar { width: 0 !important }
 
 body {
-  padding-top: 5rem;
   padding-bottom: 5rem;
   color: #5a5a5a;
   background-image: url("bg.png") !important;
@@ -20,20 +19,30 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
+#update-alert {
+  color: white; 
+  border-color: rgba(255, 238, 186, 0.5); 
+  background: rgba(255, 243, 205, 0.5);
+  width: 50%;
+  margin: 5% auto;
+}
+
 .changelog {
+  color: white; 
   background-color: rgba(0, 0, 0, 0.2);
   width: 50%;
   margin: 5% auto;
-  padding-bottom: 2.5rem;
-  color: white;
+  padding-bottom: 5px;
 }
 
 /* Carousel base class */
 .carousel {
+  
   background-color: rgba(0, 0, 0, 0.2);
   margin-bottom: 4rem;
   width: 50%;
-  margin: 0px auto;
+  margin: 5% auto;
+
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -59,6 +68,10 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
+.marketing {
+  width: 50%;
+}
+
 .marketing .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;

@@ -1,14 +1,14 @@
-const {app, BrowserWindow} = require('electron') 
-const url = require('url') 
-const path = require('path') 
-let $ = require('jquery')
+const {app, BrowserWindow, shell} = require('electron');
+const url = require('url');
+const path = require('path');
+let $ = require('jquery');
 
 let win  
 
 require('update-electron-app')()
 
 function createWindow() { 
-   win = new BrowserWindow({width: 800, height: 600}) 
+   win = new BrowserWindow({width: 800, height: 600, webPreferences: {nodeIntegration: true}}) 
    win.setFullScreen(true);
    win.setMenuBarVisibility(false);
    win.loadURL(url.format ({ 
@@ -18,6 +18,7 @@ function createWindow() {
       frame: false,
       toolbar: false
    }));
+
 }  
 
 app.on('ready', createWindow);
