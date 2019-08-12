@@ -33,14 +33,14 @@ $(document).ready(function () {
     });
     $.ajax({
         type: "GET",
-        url: "https://api.github.com/repos/DevLanceGood/FiveMCommunityLauncher/releases/latest",
+        url: "https://api.github.com/repos/grandmarshall/FiveMCommunityLauncher/releases/latest",
         dataType: "json",
         success: function(result) {
         
             if (result.tag_name != current_version) {
                 $("#update-alert").show();
-                $("#update-url").html("https://github.com/DevLanceGood/FiveMCommunityLauncher/archive/" + result.tag_name + ".zip");
-                $("#update-url").attr("href", "https://github.com/DevLanceGood/FiveMCommunityLauncher/archive/" + result.tag_name + ".zip"); 
+                $("#update-url").html("https://github.com/grandmarshall/FiveMCommunityLauncher/archive/" + result.tag_name + ".zip");
+                $("#update-url").attr("href", "https://github.com/grandmarshall/FiveMCommunityLauncher/archive/" + result.tag_name + ".zip"); 
             }
         }
     });
